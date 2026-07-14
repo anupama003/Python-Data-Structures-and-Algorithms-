@@ -1,11 +1,11 @@
 # Python Basic Input/Output
 
 ## Introduction
-When you start learning Python, it’s important to focus on the basics first. Input and Output (I/O) are fundamental concepts. Unlike C++, Python doesn't require boilerplate code like `int main()` or explicit stream management. Let’s walk through how input and output work in Python.
+When you start learning Python, it’s important to focus on the basics first. Input and Output (I/O) are fundamental concepts. Let’s walk through how input and output work in Python.
 
 ### Including Libraries:
 In Python, pre-built functions and tools are bundled into **modules**. You use the `import` keyword to include them. However, for basic I/O, Python has built-in functions, so you don't need to import anything!
-* `import math` → used for mathematical functions (equivalent to `<math.h>`).
+* `import math` → used for mathematical functions.
 
 ```python
 # No setup required! Your code runs directly.
@@ -15,7 +15,7 @@ print("Hello World")
 ---
 
 ## Output with print()
-To print output, we use the built-in `print()` function. Python does not require namespaces like `std::`.
+To print output, we use the built-in `print()` function.
 
 ```python
 print("Hey there!")
@@ -25,7 +25,7 @@ print("Hey there!")
 ---
 
 ## Printing on Multiple Lines
-In C++, sequential `cout` statements print on the same line. In Python, every `print()` statement automatically adds a newline at the end by default.
+In Python, every `print()` statement automatically adds a newline at the end by default.
 
 ```python
 print("Hey, there!")
@@ -37,7 +37,7 @@ Hey, there!
 Hey, there!
 ```
 
-### Changing the End Behavior (Simulating C++ cout)
+### Changing the End Behavior
 If you want to print without moving to a new line, you can change the `end` parameter of the `print()` function. 
 
 ```python
@@ -48,7 +48,7 @@ print("Hey, there!", end="")
 
 ### Using \n vs Default print
 * `\n` → inserts a newline character manually inside a string.
-* By default, `print()` uses `end="\n"`. You do not need an equivalent for `std::endl` because Python automatically handles buffer flushing for standard console output.
+* By default, `print()` uses `end="\n"`. Python automatically handles buffer flushing for standard console output.
 
 ```python
 print("Hey, there!\nHey, there!")
@@ -70,7 +70,7 @@ print("Value of x:", x)
 ---
 
 ## Multiple Inputs
-In C++, `cin >> x >> y;` reads space-separated values automatically. In Python, `input()` reads the whole line at once. To split space-separated values, we use the `.split()` method combined with `map()`.
+In Python, `input()` reads the whole line at once. To split space-separated values, we use the `.split()` method combined with `map()`.
 
 ```python
 # Taking two space-separated integers
@@ -80,10 +80,7 @@ print("Value of x:", x, "and y:", y)
 **Input:** `10 20`  
 **Output:** `Value of x: 10 and y: 20`
 
----
-
-## Shortcut: What about bits/stdc++.h?
-Python **does not have** or need an equivalent to `#include<bits/stdc++.h>`. 
+--- 
 
 * Python automatically loads its massive library of built-in functions (like `print()`, `input()`, `len()`, `max()`, `min()`, `sum()`) on startup.
 * You never need to pre-import basic data structures like arrays (Lists), sets, maps (Dictionaries), or stacks. They are always available out of the box!
